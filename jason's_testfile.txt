@@ -1,2 +1,0 @@
-This is a file which I committed to confirm my access to the GitHub repository under my own branch
--Jason 
