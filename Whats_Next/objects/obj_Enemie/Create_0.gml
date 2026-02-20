@@ -1,0 +1,1 @@
+xp_reward = 20
