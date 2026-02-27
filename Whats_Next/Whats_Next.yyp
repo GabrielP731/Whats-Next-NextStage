@@ -38,6 +38,7 @@
     {"id":{"name":"obj_bullet_pistol","path":"objects/obj_bullet_pistol/obj_bullet_pistol.yy",},},
     {"id":{"name":"obj_bullet_rifle","path":"objects/obj_bullet_rifle/obj_bullet_rifle.yy",},},
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},},
+    {"id":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},},
     {"id":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},},
     {"id":{"name":"obj_tower1","path":"objects/obj_tower1/obj_tower1.yy",},},
     {"id":{"name":"Upgrade_menu","path":"objects/Upgrade_menu/Upgrade_menu.yy",},},
