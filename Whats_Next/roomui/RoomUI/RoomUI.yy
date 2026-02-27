@@ -1,0 +1,21 @@
+{
+  "$GMRoomUI":"",
+  "%Name":"RoomUI",
+  "children":[
+    {"$GMRUILayer":"v1","%Name":"UI_Main","alignItems":2,"children":[
+        {"$GMRFlexPanel":"","%Name":"FlexPanel","alignItems":2,"children":[
+            {"$GMRSpriteGraphic":"v1","%Name":"graphic_690F9D26","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_690F9D26","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.20999993,"scaleY":0.20999993,"spriteId":{"name":"spr_ui_cards","path":"sprites/spr_ui_cards/spr_ui_cards.yy",},"x":-615.0,"y":-219.0,},
+          ],"flexDirection":0,"height":{"unit":3,"value":500.0,},"justifyContent":1,"name":"FlexPanel","nodeColour":4282970729,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":500.0,},},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"UI_Main","nodeColour":4290572872,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+  ],
+  "locked":false,
+  "name":"RoomUI",
+  "parent":{
+    "name":"Whats_Next",
+    "path":"Whats_Next.yyp",
+  },
+  "resourceType":"GMRoomUI",
+  "resourceVersion":"2.0",
+  "viewspaceChildren":[],
+  "visible":true,
+}
