@@ -6,3 +6,7 @@ if instance_exists(obj_cursor) {
 }
 
 speed = bulletSpeed
+// Pause Sprite.
+image_speed = 0;
+// Ensure it is the first frame.
+image_index = 0;
