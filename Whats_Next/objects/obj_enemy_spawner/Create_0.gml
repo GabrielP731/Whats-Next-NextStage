@@ -6,6 +6,7 @@ enum spawn_direction {
 	spawnDown
 }
 spawnState = spawn_direction.spawnUp
+enemyInt = 0
 xPos = 0
 yPos = 0
 enemiesSpawned = 0
