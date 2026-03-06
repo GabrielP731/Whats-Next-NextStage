@@ -1,19 +1,19 @@
 switch(spawnState) {
 	case spawn_direction.spawnUp:
-		yPos = 32
-		xPos = random_range(32, 1344)
+		yPos = upperBound
+		xPos = random_range(leftBound, rightBound)
 		break;
 	case spawn_direction.spawnDown:
-		yPos = 768
-		xPos = random_range(32, 1344)
+		yPos = lowerBound
+		xPos = random_range(leftBound, rightBound)
 		break;
 	case spawn_direction.spawnLeft:
-		xPos = 32
-		yPos = random_range(32, 768)
+		xPos = leftBound
+		yPos = random_range(lowerBound, upperBound)
 		break;
 	case spawn_direction.spawnRight:
-		xPos = 1344
-		yPos = random_range(32, 768)
+		xPos = rightBound
+		yPos = random_range(lowerBound, upperBound)
 		break;
 }
 // Hard Code enemyInt to be the number of enemy types, and have a case for each.
