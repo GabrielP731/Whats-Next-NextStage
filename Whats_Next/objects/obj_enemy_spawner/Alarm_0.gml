@@ -27,3 +27,4 @@ instance_create_layer(xPos, yPos, "Instances", obj_Enemy3)
 }
 enemiesSpawned++
 if (enemiesSpawned < wave_length) alarm[0] = spawn_interval	
+if (enemiesSpawned >= wave_length) instance_destroy()
