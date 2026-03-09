@@ -1,4 +1,4 @@
-function Card_system(){
+function scr_card_system(){
 	// color for each card
 #macro COLOR_COMMON c_gray
 #macro COLOR_RARE c_aqua  
@@ -14,6 +14,7 @@ function Card(_name, _desc, _tier, _stat, _mult, _color) constructor {
     mult = _mult;
     color = _color;
 }
+
 
 // Create the 9 cards
 global.card_pool = [
@@ -32,10 +33,5 @@ global.card_pool = [
     new Card("Hyperdrive", "Atk Speed +50%", "Epic", "speed", 1.50, COLOR_EPIC),
     new Card("Telescope", "Range +50%", "Epic", "range", 1.50, COLOR_EPIC)
 ];
-
-//card counter
-global.cards_collected = 0;
-//initial cost
-global.base_card_cost = 10; 
 
 }

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Card_system",
+  "%Name":"scr_card_system",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Card_system",
+  "name":"scr_card_system",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

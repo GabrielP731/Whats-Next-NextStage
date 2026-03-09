@@ -39,6 +39,7 @@
   "resources":[
     {"id":{"name":"obj_bullet_pistol","path":"objects/obj_bullet_pistol/obj_bullet_pistol.yy",},},
     {"id":{"name":"obj_bullet_rifle","path":"objects/obj_bullet_rifle/obj_bullet_rifle.yy",},},
+    {"id":{"name":"obj_CardManager","path":"objects/obj_CardManager/obj_CardManager.yy",},},
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},},
     {"id":{"name":"obj_Enemy_bullet","path":"objects/obj_Enemy_bullet/obj_Enemy_bullet.yy",},},
     {"id":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},},
@@ -51,7 +52,7 @@
     {"id":{"name":"Upgrade_menu","path":"objects/Upgrade_menu/Upgrade_menu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
-    {"id":{"name":"Card_system","path":"scripts/Card_system/Card_system.yy",},},
+    {"id":{"name":"scr_card_system","path":"scripts/scr_card_system/scr_card_system.yy",},},
     {"id":{"name":"scr_create_spawner","path":"scripts/scr_create_spawner/scr_create_spawner.yy",},},
     {"id":{"name":"scr_damage_player","path":"scripts/scr_damage_player/scr_damage_player.yy",},},
     {"id":{"name":"scr_wave_end_condition_check","path":"scripts/scr_wave_end_condition_check/scr_wave_end_condition_check.yy",},},
