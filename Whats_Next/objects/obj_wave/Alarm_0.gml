@@ -1,1 +1,1 @@
-scr_create_spawner(3)
+scr_create_spawner(1)

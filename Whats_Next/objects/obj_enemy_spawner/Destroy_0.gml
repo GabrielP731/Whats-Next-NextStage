@@ -3,7 +3,5 @@ if(instance_exists(obj_wave)) {
 	with (obj_wave) {
 		alarm[0] = spawnerCooldown
 	}
-	} else if (!instance_exists(obj_Enemy) && !instance_exists(obj_Enemy_bullet)) {
-		instance_destroy(obj_wave)
 	}
 }
