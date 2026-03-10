@@ -12,7 +12,6 @@ yPos = 0
 enemiesSpawned = 0
 alarm[0] = spawn_interval
 randomize();
-// obj_wave
-if(instance_exists(obj_wave)) {
-	obj_wave.numSpawners--
-}
+
+// Create Warning on a slight delay of 5 frames after instantiation.
+alarm[1] = 5

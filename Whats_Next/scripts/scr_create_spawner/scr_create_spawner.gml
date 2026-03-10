@@ -4,7 +4,7 @@ function scr_create_spawner(numEnemies, spawnDirection){
 	instance_create_layer(0, 0, "Instances", obj_enemy_spawner)
 	if (instance_exists(obj_enemy_spawner)) {
 		
-		if (is_undefined(spawnDirection)) {
+		if (is_undefined(spawnDirection) || spawnDirection == -1) {
 		randomise()
 		spawnDirection = irandom_range(0,3);
 		}
