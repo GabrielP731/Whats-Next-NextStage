@@ -1,3 +1,4 @@
+// Flashing intervals.
 alarm[1] = flashTime;
 if (!flashing) {
 flash_amount = 1

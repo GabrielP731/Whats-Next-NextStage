@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"Path_Patrol",
+  "closed":true,
+  "kind":0,
+  "name":"Path_Patrol",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":388.0,"y":356.0,},
+    {"speed":100.0,"x":1916.0,"y":356.0,},
+    {"speed":100.0,"x":1916.0,"y":1052.0,},
+    {"speed":100.0,"x":388.0,"y":1052.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

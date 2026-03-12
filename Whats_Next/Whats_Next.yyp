@@ -53,6 +53,7 @@
     {"id":{"name":"obj_wave_holder","path":"objects/obj_wave_holder/obj_wave_holder.yy",},},
     {"id":{"name":"obj_wave","path":"objects/obj_wave/obj_wave.yy",},},
     {"id":{"name":"Upgrade_menu","path":"objects/Upgrade_menu/Upgrade_menu.yy",},},
+    {"id":{"name":"Path_Patrol","path":"paths/Path_Patrol/Path_Patrol.yy",},},
     {"id":{"name":"RoomGame","path":"rooms/RoomGame/RoomGame.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"scr_card_system","path":"scripts/scr_card_system/scr_card_system.yy",},},

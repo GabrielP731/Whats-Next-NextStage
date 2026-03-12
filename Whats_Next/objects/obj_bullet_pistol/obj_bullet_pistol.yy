@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bullet_pistol",
-    "path":"sprites/spr_bullet_pistol/spr_bullet_pistol.yy",
+    "name":"spr_bullet_rifle",
+    "path":"sprites/spr_bullet_rifle/spr_bullet_rifle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
