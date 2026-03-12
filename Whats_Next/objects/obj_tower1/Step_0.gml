@@ -28,3 +28,11 @@ if (current_xp >= xp_to_next && level < 5) {
 	if (keyboard_check_pressed(ord("L"))) { 
 		current_xp += 50;
 		}
+
+// Shader Cooldown.
+if (flash_timer > 0) {
+    flash_timer--;
+    flash_amount = 1;
+} else {
+    flash_amount = 0;
+}

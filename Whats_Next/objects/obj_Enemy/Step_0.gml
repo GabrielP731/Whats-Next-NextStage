@@ -16,3 +16,10 @@ if (instance_exists(obj_tower1))
 		if(alarm[0] == -1) alarm[0] = attack_interval
     }
 }
+// Shader Cooldown.
+if (flash_timer > 0) {
+    flash_timer--;
+    flash_amount = 1;
+} else {
+    flash_amount = 0;
+}

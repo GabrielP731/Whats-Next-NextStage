@@ -13,3 +13,8 @@ sprite_level3 = spr_tower2;
 sprite_level5 = spr_tower3;
 
 sprite_index = sprite_level1;
+// Shader stats.
+flash_timer = 0;
+flash_amount = 0;
+
+u_flash = shader_get_uniform(sh_damage, "flash");

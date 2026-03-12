@@ -60,6 +60,7 @@
     {"id":{"name":"scr_damage_player","path":"scripts/scr_damage_player/scr_damage_player.yy",},},
     {"id":{"name":"scr_set_next_wave","path":"scripts/scr_set_next_wave/scr_set_next_wave.yy",},},
     {"id":{"name":"scr_wave_end_condition_check","path":"scripts/scr_wave_end_condition_check/scr_wave_end_condition_check.yy",},},
+    {"id":{"name":"sh_damage","path":"shaders/sh_damage/sh_damage.yy",},},
     {"id":{"name":"button","path":"sprites/button/button.yy",},},
     {"id":{"name":"spr_backgroundTile","path":"sprites/spr_backgroundTile/spr_backgroundTile.yy",},},
     {"id":{"name":"spr_bullet_enemy","path":"sprites/spr_bullet_enemy/spr_bullet_enemy.yy",},},
