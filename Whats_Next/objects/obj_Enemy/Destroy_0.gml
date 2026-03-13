@@ -1,5 +1,10 @@
-instance_create_layer(x, y, "Instances", obj_coin)
-global.score += totalScore
+// Put coin in random position nearby.
+randomise()
+xOffset = irandom_range(-9, 9)
+yOffset = irandom_range(-9, 9)
+instance_create_layer(x + xOffset, y + yOffset, "Instances", obj_coin)
+
+global.score += deathScore
 /**
 with (obj_player) { 
 	current_xp += other.xp_reward; 

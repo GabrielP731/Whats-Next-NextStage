@@ -36,3 +36,5 @@ if (flash_timer > 0) {
 } else {
     flash_amount = 0;
 }
+// Particle System.
+// TODO: Emit smoke when hp is under 40.
