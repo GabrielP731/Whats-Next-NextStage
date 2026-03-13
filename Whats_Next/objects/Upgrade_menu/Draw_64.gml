@@ -37,4 +37,5 @@ if (instance_exists(obj_tower1)) {
     
     draw_text(text_x_offset, center_of_icon_y - 10, "Coins: " + string(global.coins));
     draw_text(text_x_offset, center_of_icon_y + 10, "Cards: " + string(global.cards_collected));
+	draw_text(text_x_offset, center_of_icon_y - 30, "Score: " + string(global.score));
 }

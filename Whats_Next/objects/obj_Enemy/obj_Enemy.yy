@@ -38,6 +38,7 @@
     {"$GMObjectProperty":"v2","%Name":"attack_interval","filters":[],"listItems":[],"multiselect":false,"name":"attack_interval","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"attack_damage","filters":[],"listItems":[],"multiselect":false,"name":"attack_damage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"coins","filters":[],"listItems":[],"multiselect":false,"name":"coins","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"totalScore","filters":[],"listItems":[],"multiselect":false,"name":"totalScore","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

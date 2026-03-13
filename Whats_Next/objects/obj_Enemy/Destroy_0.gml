@@ -1,4 +1,5 @@
-
+instance_create_layer(x, y, "Instances", obj_coin)
+global.score += totalScore
 /**
 with (obj_player) { 
 	current_xp += other.xp_reward; 
