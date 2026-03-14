@@ -159,7 +159,7 @@ function ch8_LoadAnimation(_instance, _assetName = undefined)
 { 
 	var _asset = asset_get_index(_assetName);
 	if(_asset == _instance.sprite_index){
-		show_debug_message("SAME SPRITE DETECTED");
+		// show_debug_message("SAME SPRITE DETECTED");
 		return;
 	}
 
@@ -243,7 +243,7 @@ function ch8_CreateAnimationName(_body, _action, _direction)
 	_result += "spr_CHARACTER";
 	_result += "_" + string_upper(_body);
 	_result += "_" + string_lower(_action);
-	_result += "_" + FlaxAnimator_DirectionToString(_direction);
+	_result += "_" + ch8_DirectionToString(_direction);
 	
 	// show_debug_message("DEBUG [ch8_CreateAnimationName]: CREATED " + string(_result));
 	return _result;

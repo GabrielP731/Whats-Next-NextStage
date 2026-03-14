@@ -8,7 +8,7 @@ giveRandomColor = function()
 	var _b = irandom(255);
 	var _colour = make_colour_rgb(_r, _g, _b);
 	
-	chc_SpriteTint(self, _colour);
+	chc_SetSpriteTint(self, _colour);
 }
 
 giveRandomColor();

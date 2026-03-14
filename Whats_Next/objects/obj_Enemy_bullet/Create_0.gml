@@ -5,4 +5,4 @@ if instance_exists(obj_Player) {
 	direction = 270
 }
 
-speed = global.bulletStats.bulletSpeed;
+speed = global.bulletStats.enemyBulletSpeed;

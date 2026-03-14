@@ -20,9 +20,11 @@ global.base_card_cost = 10;
 // Removed the variable definitions from obj_bullet_pistol to put them here
 // this global will fix Pacheco's "Select A Card" feature
 global.bulletStats = {
-	bulletDamage : 8,
-	bulletSpeed : 5,
-	bulletRange : 3
+	bulletDamage : 2,
+	bulletSpeed : 8,
+	bulletRange : 0, // A stat that should be removed soon (but stays for CardSystem compatibility)
+	enemyBulletSpeed : 2,
+	enemyBulletDamage : 4
 }
 
 // These were found in obj_tower (on object that is now renamed to obj_Player)
