@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_CherryCharacterAnimator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_CherryCharacterAnimator",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

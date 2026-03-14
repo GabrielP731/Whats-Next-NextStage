@@ -1,4 +1,4 @@
-if (global.towerStats.towerXPCurrent >= global.towerStats.towerXPForUpgrade && global.towerStats.Level < 5) {
+if (global.towerStats.towerXPCurrent >= global.towerStats.towerXPForUpgrade && global.towerStats.towerLevel < 5) {
 	global.towerStats.towerXPCurrent -= global.towerStats.towerXPForUpgrade;
 	global.towerStats.towerLevel += 1;
 
@@ -15,10 +15,10 @@ if (global.towerStats.towerXPCurrent >= global.towerStats.towerXPForUpgrade && g
 	global.towerStats.towerHealthMax += 20;
 	global.towerStats.towerHealth = global.towerStats.towerHealthMax
 	
-	if (level == 3) {
+	if (global.towerStats.towerLevel == 3) {
 		 sprite_index = sprite_level3;
 		 }
-	if (level == 5){
+	if (global.towerStats.towerLevel == 5){
 		sprite_index = sprite_level5;
 	}
 	

@@ -5,6 +5,7 @@ yOffset = irandom_range(-9, 9)
 instance_create_layer(x + xOffset, y + yOffset, "Instances", obj_coin)
 
 global.score += deathScore
+global.towerStats.towerXPCurrent += xp_reward;
 
 /**
 with (obj_player) { 
