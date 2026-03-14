@@ -27,9 +27,9 @@ if (active) {
 		
 		if (selected != -1) {
             // Apply Stats 
-            if (selected.stat == "damage") obj_bullet_pistol.bulletDamage *= selected.mult;
-            if (selected.stat == "speed")  obj_bullet_pistol.bulletSpeed *= selected.mult;
-            if (selected.stat == "range")  obj_bullet_pistol.bulletRange *= selected.mult;
+            if (selected.stat == "damage") global.bulletStats.bulletDamage *= selected.mult;
+            if (selected.stat == "speed")  global.bulletStats.bulletSpeed *= selected.mult;
+            if (selected.stat == "range")  global.bulletStats.bulletRange *= selected.mult;
 			
 			//Counter + 1
             global.cards_collected += 1;

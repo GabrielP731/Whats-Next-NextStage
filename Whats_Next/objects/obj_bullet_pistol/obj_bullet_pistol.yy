@@ -10,8 +10,8 @@
   "name":"obj_bullet_pistol",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Game_Instances",
+    "path":"folders/Objects/Game_Instances.yy",
   },
   "parentObjectId":null,
   "persistent":false,

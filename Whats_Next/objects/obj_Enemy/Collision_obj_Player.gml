@@ -1,0 +1,1 @@
+scr_damage_player(self.attack_damage);

@@ -1,5 +1,5 @@
-if(instance_exists(obj_tower1) && canShoot) {
-	instance_create_layer(obj_tower1.x, obj_tower1.y, "Instance_Projectiles", obj_bullet_pistol)
+if(instance_exists(obj_Player) && canShoot) {
+	instance_create_layer(obj_Player.x, obj_Player.y, "Instances_Projectiles", obj_bullet_pistol)
 	canShoot = false
 	alarm[0] = shooting_cooldown
 }

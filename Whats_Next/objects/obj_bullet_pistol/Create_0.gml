@@ -5,7 +5,7 @@ if instance_exists(obj_cursor) {
 	direction = 270
 }
 
-speed = bulletSpeed
+speed = global.bulletStats.bulletSpeed;
 // Pause Sprite.
 image_speed = 0;
 // Ensure it is the first frame.

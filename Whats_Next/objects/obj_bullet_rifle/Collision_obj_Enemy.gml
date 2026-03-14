@@ -2,7 +2,7 @@
 // Only damage if this enemy was NOT already hit
 if (ds_list_find_index(hit_list, other) == -1)
 {
-    other.hp -= bulletDamage;
+    other.hp -= global.bulletStats.bulletDamage;
 
     if (other.hp <= 0)
     {

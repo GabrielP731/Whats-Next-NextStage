@@ -1,5 +1,5 @@
 // Make sure player exists
-if (instance_exists(obj_tower1)) {
+if (instance_exists(obj_Player)) {
 	// Get coordinates of current target.
 	var target = path_points[my_path_index];
 	var target_x = target[0];

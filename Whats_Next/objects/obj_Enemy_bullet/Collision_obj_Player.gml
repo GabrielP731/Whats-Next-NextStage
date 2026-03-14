@@ -1,0 +1,2 @@
+scr_damage_player(global.bulletStats.bulletDamage)
+instance_destroy()

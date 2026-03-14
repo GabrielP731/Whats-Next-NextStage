@@ -14,8 +14,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"propertyId":{"name":"scoreDecrementTime","path":"objects/obj_Enemy/obj_Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"480",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Game_Instances",
+    "path":"folders/Objects/Game_Instances.yy",
   },
   "parentObjectId":{
     "name":"obj_Enemy",
