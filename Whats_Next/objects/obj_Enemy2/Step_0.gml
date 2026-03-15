@@ -7,6 +7,8 @@ bullet = instance_nearest(x, y, obj_bullet_pistol)
 if(instance_exists(bullet)) {
 	distance = point_distance(x, y, bullet.x, bullet.y)
 	if(distance < dodgeRange) {
+		// Dodge Shader Activate.
+		dodge_flash_timer = 5
 		// If the distance between x values is greater than that between y values, dodge vertically.
 		if (abs(x - bullet.x) > abs(y - bullet.y)) {
 			if(y > bullet.y) {
@@ -30,4 +32,11 @@ if(instance_exists(bullet)) {
 	canDodge = false
 	}
 }
+}
+// DodgeShader Cooldown.
+if (dodge_flash_timer > 0) {
+    dodge_flash_timer--;
+    dodge_flash_amount = 1;
+} else {
+    dodge_flash_amount = 0;
 }

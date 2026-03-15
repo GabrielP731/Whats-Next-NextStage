@@ -17,7 +17,8 @@ function scr_damage_player(damage) {
         // Final sanity check for game over
         if (global.towerStats.towerHealth <= 0) {
             global.towerStats.towerHealth = 0;
-            Rude_Game_Over();
+            room_goto(RoomGameOver)
+			//Rude_Game_Over();
         }
     }
 }
