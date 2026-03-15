@@ -31,7 +31,6 @@ function draw_card_visual(_x, _y, _data) {
 }
 
 //STATS DISPLAY
-/
 if (keyboard_check(vk_control)) { 
     var _player = instance_find(obj_Player, 0);
     

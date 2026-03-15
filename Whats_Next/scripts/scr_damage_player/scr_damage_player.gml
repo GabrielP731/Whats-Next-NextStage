@@ -1,18 +1,21 @@
+
 function scr_damage_player(damage) {
-	var _cleanDamage = abs(damage);
-    // Use the global variable directly
-    var _reducedDamage = max(1, _cleanDamage / global.endurance_multiplier);
+    // 1. Safely check if the global variable exists
+    var _mult = 1.0;
+    if (variable_global_exists("endurance_multiplier")) {
+        _mult = global.endurance_multiplier;
+    }
     
-    if (global.towerStats.towerHealth > 0) {
-        
+    // 2. Force positive damage and apply reduction
+    var _absDamage = abs(damage);
+    var _reducedDamage = max(1, _absDamage / _mult);
+    
+    // 3. Apply to health
+    if (variable_global_exists("towerStats")) {
         global.towerStats.towerHealth -= _reducedDamage;
         
-   
-        if (global.towerStats.towerHealth > 0) {
-            if (instance_exists(obj_Player)) {
-                obj_Player.flash_timer = 5;
-            }
-        } else {
+        // Final sanity check for game over
+        if (global.towerStats.towerHealth <= 0) {
             global.towerStats.towerHealth = 0;
             Rude_Game_Over();
         }
