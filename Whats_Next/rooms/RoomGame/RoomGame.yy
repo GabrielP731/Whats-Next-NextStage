@@ -84,6 +84,7 @@
     {"name":"inst_F92FCD6","path":"rooms/RoomGame/RoomGame.yy",},
     {"name":"inst_49F13425","path":"rooms/RoomGame/RoomGame.yy",},
     {"name":"inst_AFAF951","path":"rooms/RoomGame/RoomGame.yy",},
+    {"name":"inst_21826ECF","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

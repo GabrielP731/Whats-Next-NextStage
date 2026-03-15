@@ -1,40 +1,49 @@
 if (active) {
+    var gui_w = display_get_gui_width();
+    var gui_h = display_get_gui_height();
 
-    //  Darken Background 
-    draw_set_alpha(0.7);
-    draw_set_color(c_black);
-    draw_rectangle(0, 0, gui_w, gui_h, false);
-    draw_set_alpha(1);
-
-    // 2. Draw "Next Upgrade Cost" 
-    draw_set_halign(fa_center);
-    draw_set_color(c_yellow);
-    draw_text(gui_w / 2, 80, "COST: " + string(current_cost) + " COINS");
-
-    // 3. Draw the two cards
-    draw_card_ui(gui_w * 0.35, gui_h * 0.5, card_left);
-    draw_card_ui(gui_w * 0.65, gui_h * 0.5, card_right);
+    // Draw the selection screen (Left and Right)
+    draw_card_visual(gui_w * 0.35, gui_h * 0.5, card_left);
+    draw_card_visual(gui_w * 0.65, gui_h * 0.5, card_right);
 }
 
-// Function to draw cards
-function draw_card_ui(_x, _y, _data) {
-    var w = 200;
-    var h = 300;
+// The core visual function
+function draw_card_visual(_x, _y, _data) {
+    var scale = 3.5; 
     
-    // Border Color based on Tier
-    draw_set_color(_data.color); 
-    draw_rectangle(_x - w/2 - 5, _y - h/2 - 5, _x + w/2 + 5, _y + h/2 + 5, false);
-    
-    // Card Face
-    draw_set_color(c_dkgray);
-    draw_rectangle(_x - w/2, _y - h/2, _x + w/2, _y + h/2, false);
-    
-    // Content
-    draw_set_color(c_white);
+   
+    var spr_w = 128 * scale;
+    var spr_h = 128 * scale;
+    draw_sprite_ext(_data.sprite, 0, _x - (spr_w/2), _y - (spr_h/2), scale, scale, 0, c_white, 1);
+
+    // 2. Text Setup
     draw_set_halign(fa_center);
-    draw_text(_x, _y - 120, _data.name);
-    draw_text_ext(_x, _y, _data.desc, 22, w - 20);
+    draw_set_valign(fa_middle);
     
-    draw_set_color(_data.color);
-    draw_text(_x, _y + 130, "[" + string_upper(_data.tier) + "]");
+    // 3. Draw Name (Top Box)
+    draw_set_color(c_black); 
+    draw_text_transformed(_x, _y - (40 * scale), _data.name, scale * 0.4, scale * 0.4, 0);
+
+    // 4. Draw Description 
+    draw_set_color(c_white);
+    var text_y = _y + (32 * scale); 
+    draw_text_ext_transformed(_x, text_y, _data.desc, 12, 100, scale * 0.4, scale * 0.4, 0);
+}
+
+//STATS DISPLAY
+/
+if (keyboard_check(vk_control)) { 
+    var _player = instance_find(obj_Player, 0);
+    
+    if (_player != noone) {
+        draw_set_halign(fa_left);
+        draw_set_color(c_yellow); 
+        
+        var _y = 20;
+        draw_text(20, _y, "--- LIVE STATS ---");
+        draw_text(20, _y + 20, "Damage Mult: " + string(_player.damage_mult));
+        draw_text(20, _y + 40, "Speed Mult: " + string(_player.atk_speed_mult));
+        draw_text(20, _y + 60, "Endurance Mult: " + string(_player.endurance_mult));
+        draw_text(20, _y + 80, "Cards Collected: " + string(global.cards_collected));
+    }
 }

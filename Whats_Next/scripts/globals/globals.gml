@@ -21,6 +21,7 @@ global.base_card_cost = 10;
 // this global will fix Pacheco's "Select A Card" feature
 global.bulletStats = {
 	bulletDamage : 2,
+	fireRateDelay : 30,
 	bulletSpeed : 8,
 	bulletRange : 0, // A stat that should be removed soon (but stays for CardSystem compatibility)
 	enemyBulletSpeed : 2,
@@ -32,8 +33,9 @@ global.towerStats = {
 	towerLevel : 1, // originally obj_tower >> level
 	towerXPCurrent : 0, // originally obj_tower >> current_xp
 	towerXPForUpgrade : 100, // originally obj_tower >> xp_to_next
-	towerHealth : 0, // originally obj_tower >> hp
-	towerHealthMax : 100 // originally obj_tower >> max_hp
+	towerHealth : 100, // originally obj_tower >> hp
+	towerHealthMax : 100 ,// originally obj_tower >> max_hp
+	endurance_mult : 1.0
 }
 
 global.towerSprites = [spr_tower1, spr_tower2, spr_tower3];

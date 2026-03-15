@@ -1,16 +1,22 @@
-function scr_damage_player(damage){
-	if(global.towerStats.towerHealth > 0) {
-		global.towerStats.towerHealth -= damage
-	if(global.towerStats.towerHealth > 0) {
-		obj_Player.flash_timer = 5;
-	} else {
-			global.towerStats.towerHealth = 0
-			// TODO: Game Over
-
-				// here's a rude game_over mechanic
-				Rude_Game_Over();
-		}
-	}
+function scr_damage_player(damage) {
+	var _cleanDamage = abs(damage);
+    // Use the global variable directly
+    var _reducedDamage = max(1, _cleanDamage / global.endurance_multiplier);
+    
+    if (global.towerStats.towerHealth > 0) {
+        
+        global.towerStats.towerHealth -= _reducedDamage;
+        
+   
+        if (global.towerStats.towerHealth > 0) {
+            if (instance_exists(obj_Player)) {
+                obj_Player.flash_timer = 5;
+            }
+        } else {
+            global.towerStats.towerHealth = 0;
+            Rude_Game_Over();
+        }
+    }
 }
 
 function Rude_Game_Over()

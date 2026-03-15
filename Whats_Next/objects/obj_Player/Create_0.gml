@@ -1,5 +1,10 @@
 // I moved the tower stats to global variables 
 // so we don't confuse their location down the line
+
+// this variable need to be local otherwise the card system will not allow it.
+damage_mult = 1.0;
+atk_speed_mult = 1.0;
+endurance_mult = 1.0;
 global.towerStats.towerHealth = global.towerStats.towerHealthMax;
 
 //for tower sprite change on lvl 3 and 5

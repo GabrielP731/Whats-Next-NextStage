@@ -1,37 +1,27 @@
-function scr_card_system(){
-	// color for each card
-#macro COLOR_COMMON c_gray
-#macro COLOR_RARE c_aqua  
-#macro COLOR_EPIC c_red
-
-
-//constructor
-function Card(_name, _desc, _tier, _stat, _mult, _color) constructor {
+// 1. Define the Constructor with a sprite parameter
+function Card(_name, _desc, _tier, _stat, _mult, _sprite) constructor {
     name = _name;
     desc = _desc;
     tier = _tier;
     stat = _stat;
     mult = _mult;
-    color = _color;
+    sprite = _sprite; // This stores the actual sprite asset name
 }
 
-
-// Create the 9 cards
+// 2. The Card Pool (Assigning your sprites to the tiers)
 global.card_pool = [
-    // COMMON (10% boosts)
-    new Card("Sharpen time", "Damage +10%", "Common", "damage", 1.10, COLOR_COMMON),
-    new Card("Warm up", "Atk Speed +10%", "Common", "speed", 1.10, COLOR_COMMON),
-    new Card("Long Barrel", "Range +10%", "Common", "range", 1.10, COLOR_COMMON),
+    // COMMON (Sky Sprite)
+    new Card("Sharpen", "Damage +10%", "Common", "damage", 1.10, spr_card_sky),
+    new Card("Warm up", "Atk Speed +10%", "Common", "speed", 1.10, spr_card_sky),
+    new Card("Thick Skin", "Endurance +10%", "Common", "endurance", 1.10, spr_card_sky),
     
-    // RARE (25% boosts)
-    new Card("Heavy Ammunition", "Damage +25%", "Rare", "damage", 1.25, COLOR_RARE),
-    new Card("Overload", "Atk Speed +25%", "Rare", "speed", 1.25, COLOR_RARE),
-    new Card("Already saw you", "Range +25%", "Rare", "range", 1.25, COLOR_RARE),
+    // RARE (Electric Sprite)
+    new Card("Heavy Ammo", "Damage +25%", "Rare", "damage", 1.25, spr_card_electric),
+    new Card("Overload", "Atk Speed +25%", "Rare", "speed", 1.25, spr_card_electric),
+    new Card("Unstoppable", "Endurance +25%", "Rare", "endurance", 1.25, spr_card_electric),
     
-    // EPIC (50% boosts)
-    new Card("Giant Slayer", "Damage +50%", "Epic", "damage", 1.50, COLOR_EPIC),
-    new Card("Hyperdrive", "Atk Speed +50%", "Epic", "speed", 1.50, COLOR_EPIC),
-    new Card("Telescope", "Range +50%", "Epic", "range", 1.50, COLOR_EPIC)
+    // EPIC (Blood Sprite)
+    new Card("Giant Slayer", "Damage +50%", "Epic", "damage", 1.50, spr_card_blood),
+    new Card("Hyperdrive", "Atk Speed +50%", "Epic", "speed", 1.50, spr_card_blood),
+    new Card("God's Will", "Endurance +50%", "Epic", "endurance", 1.50, spr_card_blood)
 ];
-
-}
