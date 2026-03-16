@@ -22,7 +22,7 @@ function draw_card_visual(_x, _y, _data) {
     
     // 3. Draw Name (Top Box)
     draw_set_color(c_black); 
-    draw_text_transformed(_x, _y - (40 * scale), _data.name, scale * 0.4, scale * 0.4, 0);
+    draw_text_transformed(_x, _y - (5 * scale), _data.name, scale * 0.4, scale * 0.4, 0);
 
     // 4. Draw Description 
     draw_set_color(c_white);
