@@ -9,6 +9,8 @@ if(instance_exists(bullet)) {
 	if(distance < dodgeRange) {
 		// Dodge Shader Activate.
 		dodge_flash_timer = 5
+		// Dodge Particle Object.
+		instance_create_layer(x, y, "Instances", obj_dash_particle)
 		// If the distance between x values is greater than that between y values, dodge vertically.
 		if (abs(x - bullet.x) > abs(y - bullet.y)) {
 			if(y > bullet.y) {
@@ -28,7 +30,8 @@ if(instance_exists(bullet)) {
 			}
 			
 		}
-	
+	// Dodge Particle Object.
+		instance_create_layer(x, y, "Instances", obj_dash_particle)
 	canDodge = false
 	}
 }

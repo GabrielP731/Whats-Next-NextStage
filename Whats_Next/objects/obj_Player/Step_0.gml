@@ -37,4 +37,15 @@ if (flash_timer > 0) {
     flash_amount = 0;
 }
 // Particle System.
-// TODO: Emit smoke when hp is under 40.
+// TODO: Emit smoke when hp is under 40%.
+if(global.towerStats.towerHealth < global.towerStats.towerHealthMax * 0.4) {
+if(!healthLow) {
+
+instance_create_layer(x, y, "Instances", obj_player_smoke_particle)
+healthLow = true
+}
+} else if (global.towerStats.towerHealth >= global.towerStats.towerHealthMax * 0.4 and healthLow)  {
+	healthLow = false
+	if(instance_exists(obj_player_smoke_particle)) instance_destroy(obj_player_smoke_particle)
+	
+}

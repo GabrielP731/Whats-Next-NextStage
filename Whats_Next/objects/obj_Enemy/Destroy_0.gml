@@ -7,6 +7,7 @@ instance_create_layer(x + xOffset, y + yOffset, "Instances", obj_coin)
 global.score += deathScore
 global.towerStats.towerXPCurrent += xp_reward;
 
+instance_create_layer(x, y, "Instances", obj_enemydeath_particle)
 /**
 with (obj_player) { 
 	current_xp += other.xp_reward; 

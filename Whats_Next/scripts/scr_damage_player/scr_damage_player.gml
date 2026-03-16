@@ -13,10 +13,18 @@ function scr_damage_player(damage) {
     // 3. Apply to health
     if (variable_global_exists("towerStats")) {
         global.towerStats.towerHealth -= _reducedDamage;
-        
+        // Apply Shader.
+		with(obj_Player) {
+			flash_timer = 5
+		}
         // Final sanity check for game over
         if (global.towerStats.towerHealth <= 0) {
             global.towerStats.towerHealth = 0;
+			if(instance_exists(obj_player_smoke_particle)) instance_destroy(obj_player_smoke_particle)
+			with (obj_Player) {
+			healthLow = false
+			
+			}
             room_goto(RoomGameOver)
 			//Rude_Game_Over();
         }

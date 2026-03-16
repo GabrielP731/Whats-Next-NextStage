@@ -18,3 +18,7 @@ flash_timer = 0;
 flash_amount = 0;
 
 u_flash = shader_get_uniform(sh_damage, "flash");
+
+
+// Bool for if health is low.
+healthLow = false
