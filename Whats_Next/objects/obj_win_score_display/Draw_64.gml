@@ -1,0 +1,1 @@
+draw_text(x, y, "Final Score: " + string(global.score))

@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 // Once in attack range, can no longer dodge.
-if (dist <= obj_Player.sprite_width * 5/4) canDodge = false
+if (dist <= obj_Player.sprite_width * 3/4) canDodge = false
 if(canDodge) {
 bullet = instance_nearest(x, y, obj_bullet_pistol)
 if(instance_exists(bullet)) {

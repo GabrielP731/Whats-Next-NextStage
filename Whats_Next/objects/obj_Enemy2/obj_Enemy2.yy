@@ -37,7 +37,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"dodgeRange","filters":[],"listItems":[],"multiselect":false,"name":"dodgeRange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"dodgeRange","filters":[],"listItems":[],"multiselect":false,"name":"dodgeRange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"250","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"dodgeDistance","filters":[],"listItems":[],"multiselect":false,"name":"dodgeDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"200","varType":1,},
   ],
   "resourceType":"GMObject",

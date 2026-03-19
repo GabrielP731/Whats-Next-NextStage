@@ -1,4 +1,5 @@
-//ParticleSystem_Bullet
+
+//ParticleSystem_Bullet_Final
 _ps = part_system_create();
 part_system_draw_order(_ps, true);
 
@@ -11,7 +12,7 @@ part_type_speed(_ptype1, 5, 5, 0, 0);
 part_type_direction(_ptype1, 80, 100, 0, 0);
 part_type_gravity(_ptype1, 0.7, 270);
 part_type_orientation(_ptype1, 0, 0, 0, 0, false);
-part_type_colour3(_ptype1, $0000FF, $00FAFF, $0077FF);
+part_type_colour3(_ptype1, $FF0008, $FFD1BC, $FFF600);
 part_type_alpha3(_ptype1, 1, 1, 1);
 part_type_blend(_ptype1, false);
 part_type_life(_ptype1, 10, 15);

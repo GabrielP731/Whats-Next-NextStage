@@ -1,3 +1,4 @@
+if(!visible) exit
 // Reset global values.
 global.waveNumber = 1
 global.coins = 0; 
