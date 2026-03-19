@@ -3,7 +3,7 @@ if (instance_exists(obj_Player))
 {
     dist = point_distance(x, y, obj_Player.x, obj_Player.y);
     // 
-    if (dist > obj_Player.sprite_width * 5/4)
+    if (dist > obj_Player.sprite_width * 1/2)
     {
         // Move toward player
         direction = point_direction(x, y, obj_Player.x, obj_Player.y);
