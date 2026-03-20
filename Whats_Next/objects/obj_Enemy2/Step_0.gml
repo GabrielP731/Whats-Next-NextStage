@@ -11,6 +11,8 @@ if(instance_exists(bullet)) {
 		dodge_flash_timer = 5
 		// Dodge Particle Object.
 		instance_create_layer(x, y, "Instances", obj_dash_particle)
+		// Play Sound
+		audio_play_sound(snd_enemy_dodge, 2, false)
 		// If the distance between x values is greater than that between y values, dodge vertically.
 		if (abs(x - bullet.x) > abs(y - bullet.y)) {
 			if(y > bullet.y) {

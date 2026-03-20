@@ -133,6 +133,7 @@
     {"id":{"name":"snd_card_pick","path":"sounds/snd_card_pick/snd_card_pick.yy",},},
     {"id":{"name":"snd_coin","path":"sounds/snd_coin/snd_coin.yy",},},
     {"id":{"name":"snd_enemy_damage","path":"sounds/snd_enemy_damage/snd_enemy_damage.yy",},},
+    {"id":{"name":"snd_enemy_dodge","path":"sounds/snd_enemy_dodge/snd_enemy_dodge.yy",},},
     {"id":{"name":"snd_enemy_shoot","path":"sounds/snd_enemy_shoot/snd_enemy_shoot.yy",},},
     {"id":{"name":"snd_game_menu","path":"sounds/snd_game_menu/snd_game_menu.yy",},},
     {"id":{"name":"snd_music_game","path":"sounds/snd_music_game/snd_music_game.yy",},},
