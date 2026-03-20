@@ -1,2 +1,3 @@
 if(!visible) exit
-draw_text(50, room_height - 50, "Girikratna Sharma, Gabriel Pacheco, Jason Barksdale, Justin Torres")
+draw_set_halign(fa_left);
+draw_text(x, y, "Girikratna Sharma, Gabriel Pacheco, Jason Barksdale, Justin Torres")

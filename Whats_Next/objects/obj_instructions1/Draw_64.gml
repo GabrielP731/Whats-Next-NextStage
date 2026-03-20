@@ -3,7 +3,7 @@ if (!visible) exit;
 
 var _scale = 2.0;
 
-var manualStr = "HOW TO PLAY:\n \n Mouse Movement: Aim/Adjust bullet trajectory.\n \n Left Click: Fire \n \n E: Purchase an Upgrade Card";
+var manualStr = "HOW TO PLAY:\n \n Mouse Movement: Aim/Adjust \n \n bullet trajectory.\n \n Left Click: Fire \n \n E: Purchase an Upgrade Card";
 
 
 draw_set_halign(fa_center);
