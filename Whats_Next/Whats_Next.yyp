@@ -107,6 +107,8 @@
     {"id":{"name":"scr_wave_end_condition_check","path":"scripts/scr_wave_end_condition_check/scr_wave_end_condition_check.yy",},},
     {"id":{"name":"sh_damage","path":"shaders/sh_damage/sh_damage.yy",},},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},},
+    {"id":{"name":"snd_card_close","path":"sounds/snd_card_close/snd_card_close.yy",},},
+    {"id":{"name":"snd_card_pick","path":"sounds/snd_card_pick/snd_card_pick.yy",},},
     {"id":{"name":"snd_coin","path":"sounds/snd_coin/snd_coin.yy",},},
     {"id":{"name":"snd_enemy_damage","path":"sounds/snd_enemy_damage/snd_enemy_damage.yy",},},
     {"id":{"name":"snd_music_game","path":"sounds/snd_music_game/snd_music_game.yy",},},

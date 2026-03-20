@@ -15,6 +15,8 @@ if (keyboard_check_pressed(ord("E"))) {
         card_right = global.card_pool[irandom(array_length(global.card_pool) - 1)];
         
         instance_deactivate_all(true); 
+		// Play Sound
+		audio_play_sound(snd_card_pick, 1, false)
     }
 }
 
@@ -24,10 +26,12 @@ if (active && mouse_check_button_pressed(mb_left)) {
     var gui_w = display_get_gui_width();
     var selected_card = (mx < gui_w / 2) ? card_left : card_right;
     
+	
     // Pause
     instance_activate_all();
-    
-
+    // Play Sound
+	audio_play_sound(snd_card_close, 1, false)
+	
     var _player = instance_find(obj_Player, 0);
     
 	 // Apply the multiplier 
@@ -47,7 +51,7 @@ if (active && mouse_check_button_pressed(mb_left)) {
 		global.endurance_multiplier *= selected_card.mult;
 			}
     }
-    
+	
     global.cards_collected += 1;
     active = false;
 }
