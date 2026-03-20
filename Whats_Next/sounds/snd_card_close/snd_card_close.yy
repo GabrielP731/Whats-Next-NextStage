@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.4249432,
+  "duration":1.0560317,
   "exportDir":"",
   "name":"snd_card_close",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_card_close.ogg",
+  "soundFile":"snd_card_close.wav",
   "volume":1.0,
 }

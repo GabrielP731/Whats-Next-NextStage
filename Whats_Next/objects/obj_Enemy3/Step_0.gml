@@ -20,6 +20,8 @@ if (instance_exists(obj_Player)) {
 		// Use modulo of the length of the path/array to loop targets for a closed path.
 	    my_path_index = (my_path_index + 1) mod array_length(path_points);
 	}
+	
+	ch8_characterState = ch8_CHARACTER_STATE.ATTACKING;
 }
 // Shader Cooldown.
 if (flash_timer > 0) {
@@ -28,3 +30,5 @@ if (flash_timer > 0) {
 } else {
     flash_amount = 0;
 }
+
+ch8_Animate(self); // CherryCharacterAnimator

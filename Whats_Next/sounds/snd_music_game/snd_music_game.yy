@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":91.178955,
+  "duration":195.42494,
   "exportDir":"",
   "name":"snd_music_game",
   "parent":{

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.4220407,
+  "duration":0.3082086,
   "exportDir":"",
   "name":"snd_enemy_damage",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_enemy_damage.ogg",
+  "soundFile":"snd_enemy_damage.wav",
   "volume":1.0,
 }

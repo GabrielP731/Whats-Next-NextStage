@@ -1,0 +1,11 @@
+Animations Rates		- 	12FPS (from 60FPS)
+Animation Times			-	8:1 (from 100:100)
+
+CHARACTERS
+	walk_armed			-	12 FRAMES (from 100)
+	walk_unarmed		-	12 FRAMES (from 100)
+	attack_giant		-	20 FRAMES (from 160)
+	attack_swordsman	-	20 FRAMES (from 160)
+	attack_ranger		-	20 FRAMES (from 160)
+	death				-	12 FRAMES (from 90)
+	idle				- 	2 FRAMES (from 5)

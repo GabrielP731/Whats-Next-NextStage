@@ -5,17 +5,11 @@
 
 
 // Important Flag
-// Makes unloaded assets searchable by name
+// Makes unloaded assets searchable by string
 //		(see "GML Reference >> Asset Managment >> Assets And Tags 
 //			>> asset_get_index()" in the GameMaker Manual)
-gml_pragma("MarkTagAsUsed", "character_anim");
-
-// !! warning !!
-// I made a mistake while exporting my sprites 
-// This affects the direction my animated-sprites are facing
-//
-// (see the bottom of ch8_AngleToDirection)
-
+gml_pragma("MarkTagAsUsed", "cherry_character");
+gml_pragma("MarkTagAsUsed", "cherry_timeline");
 
 
 
@@ -46,14 +40,14 @@ gml_pragma("MarkTagAsUsed", "character_anim");
 // the order of these elements are very important to ch8_AngleToDirection
 enum ch8_DIRECTION
 {
-	FRONT,
-	FRONT_RIGHT,
 	RIGHT,
-	BACK_RIGHT,
-	BACK,
-	BACK_LEFT,
+	FRONT_RIGHT,
+	FRONT,
+	FRONT_LEFT,
 	LEFT,
-	FRONT_LEFT
+	BACK_LEFT,
+	BACK,
+	BACK_RIGHT
 }
 
 // DIRECTION_STRINGS
@@ -61,7 +55,7 @@ enum ch8_DIRECTION
 //
 // note
 // the order of this array corresponds to the [ch8_DIRECTION] enum 
-global.ch8_DIRECTION_STRINGS = ["F","FR","R","BR","B","BL","L","FL"];
+global.ch8_DIRECTION_STRINGS = ["R", "FR", "F", "FL", "L", "BL", "B", "BR"];
 
 
 // AngleToDirection
@@ -70,10 +64,9 @@ global.ch8_DIRECTION_STRINGS = ["F","FR","R","BR","B","BL","L","FL"];
 //
 // parameters
 // _angle [float]: the angle of some instance
-// _wrongName [boolean]: reverses the issue with my incorrectly named sprites
 // 
 // returns [ch8_DIRECTION]: a direction label
-function ch8_AngleToDirection(_angle, _wrongName = false)
+function ch8_AngleToDirection(_angle)
 {
 	var _result  = 0;
 	for(var _i = 0; _i < 8; _i++)
@@ -93,15 +86,6 @@ function ch8_AngleToDirection(_angle, _wrongName = false)
 	}
 	
 	// A crude workaround for my animated sprites having improper file names
-	if(_wrongName)
-	{
-		_result -= 2;
-		_result *= -1;
-		if(_result < 0)
-			_result += 8;
-		
-		_result = (_result + 4) % 8
-	}
 		
 	
 	return _result;
@@ -116,7 +100,7 @@ function ch8_AngleToDirection(_angle, _wrongName = false)
 // 
 // returns [string]: a file suffix
 function ch8_DirectionToString(_direction)
-{ return global.CH8_DIRECTION_STRINGS[_direction]; }
+{ return global.ch8_DIRECTION_STRINGS[_direction]; }
 
 
 
@@ -191,9 +175,30 @@ function ch8_ResumeAnimation(_instance)
 // 
 // parameters
 // _instance [index]: the instance to be affected
-// _index [int64]: the frame that will be displayed
-function ch8_SetFrame(_instance, _index)
-{_instance.image_index = _index;}
+// _frame [int64]: the frame that will be displayed
+function ch8_SetFrame(_instance, _frame)
+{
+	_instance.image_index = _frame;
+}
+
+
+
+function ch8_GiveTimeline(_instance, _title = undefined)
+{
+	var _asset = asset_get_index("tl_" + string(_title));
+	
+	var _message = "search for " + string(_title) + " returned " + string(_asset);
+	// show_debug_message(_message);
+	if(_title == undefined || _asset == undefined)
+	{
+		_instance.timeline_index = undefined;
+		return;
+	}
+	
+	_instance.timeline_index = _asset;
+	_instance.timeline_position = _instance.image_index;
+	_instance.timeline_running = true;
+}
 
 
 
@@ -249,7 +254,7 @@ function ch8_CreateAnimationName(_body, _action, _direction)
 	return _result;
 }
 
-// StoreCharacterData
+// StoreCharacterIdentity
 // updates a few variables that are associated with CherryCharacterAnimator
 // allows you to use ch8_DrawCharacter without filling in all its arguments
 // 
@@ -257,7 +262,7 @@ function ch8_CreateAnimationName(_body, _action, _direction)
 // _instance [index]: the instance to be affected
 // _body [string]: the type of human within the instance's sprite
 // _action [string]: the type of action within the instance's sprite
-function ch8_StoreCharacterData(_instance, _body, _action)
+function ch8_StoreCharacterIdentity(_instance, _body, _action)
 {
 	// For use with ch8_DrawCharacter
 	with (_instance)
@@ -278,14 +283,27 @@ function ch8_DrawCharacter(_instance, _body = undefined, _action = undefined)
 { 
 	if(!instance_exists(_instance))	return;
 	
+	
 	// Retrieval/Storage of Animation Data 
 	if(is_undefined(_body))			_body	= _instance.ch8_characterBody;
+	
+	if(_body != undefined && _action != _instance.ch8_characterAction)
+	{
+		// Look for new Timline
+		var _code = string_lower(_body) + "_" + string_lower(_action);
+		ch8_GiveTimeline(self, _code);
+		
+		
+		// Restart Animation
+		ch8_SetFrame(_instance, 0);
+	}
+	
 	if(is_undefined(_action))		_action = _instance.ch8_characterAction;
-	ch8_StoreCharacterData(_instance, _body, _action);
+	ch8_StoreCharacterIdentity(_instance, _body, _action);
 	
 	
 	// Loading Sprite
-	var _direction = ch8_AngleToDirection(_instance.direction, true);
+	var _direction = ch8_AngleToDirection(_instance.direction);
 	var _assetName = ch8_CreateAnimationName(_body, _action, _direction);
 	ch8_LoadAnimation(_instance, _assetName);
 }
@@ -343,6 +361,8 @@ enum ch8_CHARACTER_STATE
 	ATTACKING,
 	DYING
 }
+
+
 
 // ch8_Moving
 // actions associated with the "IDLE" and "WALKING" states
@@ -403,6 +423,16 @@ function ch8_Init(_instance, _body)
 	ch8_characterAction = "idle";
 	ch8_characterState = ch8_CHARACTER_STATE.IDLE;
 	ch8_characterStatePrevious = undefined;
+	ch8_frameActionAvailable = true;
+}
+
+// ch8_EndFrame
+// closes out each frame of the CherryAnimator State Machine
+function ch8_EndFrame(_instance)
+{
+	// Variable Storage
+	_instance.ch8_characterStatePrevious = _state;
+
 }
 
 // ch8_Animate
@@ -412,13 +442,10 @@ function ch8_Init(_instance, _body)
 // _instance [index]: the instance to be affected
 function ch8_Animate(_instance)
 {
-	var _state = _instance.ch8_characterState;
-	var _statePrevious = _instance.ch8_characterStatePrevious;
-	
+	_state = _instance.ch8_characterState;
 	switch(_state)
 	{
 		case ch8_CHARACTER_STATE.ATTACKING:
-			_instance.speed = 0;
 			ch8_Attacking(_instance);
 			break;
 			
@@ -431,9 +458,6 @@ function ch8_Animate(_instance)
 			break;
 	}
 	
-	// if (_state != _statePrevious)
-	//		ch8_SetFrame(_instance, 0);
-		
-	_instance.ch8_characterStatePrevious = _state;
+	ch8_EndFrame(_instance);
 }
 

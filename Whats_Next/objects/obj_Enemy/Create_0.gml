@@ -12,3 +12,14 @@ flash_timer = 0;
 flash_amount = 0;
 
 u_flash = shader_get_uniform(sh_damage, "flash");
+
+
+// Hot Fix: Sprite Size was too small for the game
+image_xscale = 2.5;
+image_yscale = 2.5;
+// CherryCharacterAnimator
+ch8_Init(self, "GIANT");
+attack_script = function()
+{
+	scr_damage_player(attack_damage);
+};

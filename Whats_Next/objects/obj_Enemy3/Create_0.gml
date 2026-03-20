@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+
 alarm[1] = shoot_interval
 on_path = false
 target_index = 0;
@@ -27,4 +28,10 @@ for (var i = 0; i < n; i++)
         nearest_dist = d;
         my_path_index = i;
     }
+}
+
+ch8_Init(self, "RANGER");
+attack_script = function()
+{
+	instance_create_layer(x, y, "Instances_Projectiles", obj_Enemy_bullet);
 }

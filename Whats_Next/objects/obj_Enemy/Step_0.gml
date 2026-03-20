@@ -8,12 +8,13 @@ if (instance_exists(obj_Player))
         // Move toward player
         direction = point_direction(x, y, obj_Player.x, obj_Player.y);
         speed = move_speed;
+		ch8_characterState = ch8_CHARACTER_STATE.IDLE; // CherryCharacterAnimator
     }
     else
     {
         // Stop moving when close enough
         speed = 0;
-		if(alarm[0] == -1) alarm[0] = attack_interval
+		ch8_characterState = ch8_CHARACTER_STATE.ATTACKING; // CherryCharacterAnimator
     }
 }
 // Shader Cooldown.
@@ -23,3 +24,6 @@ if (flash_timer > 0) {
 } else {
     flash_amount = 0;
 }
+
+
+ch8_Animate(self); // CherryCharacterAnimator
