@@ -1,3 +1,4 @@
+if(camera_get_view_x(view_camera[0]) == camera_get_view_x(view_camera[view_current])) {
 // Shader.
 if (flash_amount > 0) {
     shader_set(sh_damage);
@@ -15,4 +16,5 @@ if (flash_amount > 0) {
 }
 if (dodge_flash_amount > 0) {
     shader_reset();
+}
 }

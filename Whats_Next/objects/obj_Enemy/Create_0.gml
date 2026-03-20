@@ -12,8 +12,9 @@ flash_timer = 0;
 flash_amount = 0;
 
 u_flash = shader_get_uniform(sh_damage, "flash");
-
-
+// Minimap indicator.
+minimap = instance_create_layer(x, y, "Instances", minimap_indicator)
+minimap.parent = id
 // Hot Fix: Sprite Size was too small for the game
 image_xscale = 2.5;
 image_yscale = 2.5;

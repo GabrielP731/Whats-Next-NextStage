@@ -8,6 +8,8 @@ global.score += deathScore
 global.towerStats.towerXPCurrent += xp_reward;
 
 instance_create_layer(x, y, "Instances", obj_enemydeath_particle)
+// Destroy minimap sprite.
+instance_destroy(minimap)
 /**
 with (obj_player) { 
 	current_xp += other.xp_reward; 

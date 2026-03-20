@@ -42,6 +42,7 @@
     {"$GMObjectProperty":"v2","%Name":"coins","filters":[],"listItems":[],"multiselect":false,"name":"coins","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"totalScore","filters":[],"listItems":[],"multiselect":false,"name":"totalScore","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"scoreDecrementTime","filters":[],"listItems":[],"multiselect":false,"name":"scoreDecrementTime","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"360","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"minimap_indicator","filters":[],"listItems":[],"multiselect":false,"name":"minimap_indicator","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_enemy_minimap","path":"objects/obj_enemy_minimap/obj_enemy_minimap.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_enemy_minimap","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
