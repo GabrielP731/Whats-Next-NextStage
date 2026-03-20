@@ -37,7 +37,7 @@ Unless explicitly written in this document, all assets (sounds, images, sprites)
 are the works of Jason M. Barksdale of Team Ilúvatar
 
 Handjet is the font used for the title and win screen art.
-Handjet - The Handjet Project
+Handjet - The Handjet Project (By rosettatype)
 https://github.com/rosettatype/Handjet/
 https://scripts.sil.org/OFL
 
