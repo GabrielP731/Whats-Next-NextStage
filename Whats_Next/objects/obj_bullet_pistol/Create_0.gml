@@ -4,7 +4,7 @@ if instance_exists(obj_cursor) {
 } else {
 	direction = 270
 }
-
+audio_play_sound(snd_shoot, 1, false)
 speed = global.bulletStats.bulletSpeed;
 // Pause Sprite.
 image_speed = 0;

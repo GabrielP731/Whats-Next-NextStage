@@ -9,7 +9,8 @@ function scr_damage_player(damage) {
     // 2. Force positive damage and apply reduction
     var _absDamage = abs(damage);
     var _reducedDamage = max(1, _absDamage / _mult);
-    
+    // Play Sound
+	audio_play_sound(snd_player_damage, 1, false)
     // 3. Apply to health
     if (variable_global_exists("towerStats")) {
         global.towerStats.towerHealth -= _reducedDamage;

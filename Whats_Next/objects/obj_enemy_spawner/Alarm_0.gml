@@ -25,6 +25,11 @@ if (enemyInt == 0) {
 } else if (enemyInt == 2) {
 	instance_create_layer(xPos, yPos, "Instances_Enemies", obj_Enemy3)
 }
+if(enemyInt % 2 == 0) {
+	audio_play_sound(snd_step1, 3, false)
+} else {
+	audio_play_sound(snd_step2, 3, false)
+}
 enemiesSpawned++
 if (enemiesSpawned < wave_length) alarm[0] = spawn_interval	
 if (enemiesSpawned >= wave_length) instance_destroy()
