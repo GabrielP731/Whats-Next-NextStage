@@ -38,7 +38,7 @@ if (keyboard_check(vk_control)) {
         draw_set_halign(fa_left);
         draw_set_color(c_yellow); 
         
-        var _y = 20;
+        var _y = 250;
         draw_text(20, _y, "--- LIVE STATS ---");
         draw_text(20, _y + 20, "Damage Mult: " + string(_player.damage_mult));
         draw_text(20, _y + 40, "Speed Mult: " + string(_player.atk_speed_mult));

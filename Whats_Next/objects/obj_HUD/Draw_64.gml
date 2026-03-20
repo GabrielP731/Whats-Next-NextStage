@@ -38,8 +38,12 @@ if (instance_exists(obj_Player)) {
 	
 	var _coinsText = "Coins: " + string(global.coins); // Current coins
 	_coinsText += " (" + string(obj_CardManager.current_cost) + " needed)"; // Coins needed to open the card menu
-	
+	if(global.coins >= obj_CardManager.current_cost) {
+	draw_text(text_x_offset, center_of_icon_y - 10, _coinsText + " PRESS E");
+	}
+	else {
     draw_text(text_x_offset, center_of_icon_y - 10, _coinsText);
+	}
     draw_text(text_x_offset, center_of_icon_y + 10, "Cards: " + string(global.cards_collected));
 	draw_text(text_x_offset, center_of_icon_y - 30, "Score: " + string(global.score));
 }
