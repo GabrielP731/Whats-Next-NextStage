@@ -1,3 +1,14 @@
-if(!visible) exit
-// Put instructions in text prompt.
-draw_text_ext(room_width/4, 200, "The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly but gets faster each minute after you hear this signal bodeboop. A sing lap should be completed every time you hear this sound. ding Remember to run in a straight line and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark. Get ready!… Start. ding﻿", 30, 700)
+if (!visible) exit;
+ // must match the asset name exactly
+
+var _scale = 2.0;
+
+var manualStr = "HOW TO PLAY:\n \n Mouse Movement: Aim/Adjust bullet trajectory.\n \n Left Click: Fire \n \n E: Purchase an Upgrade Card";
+
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+image_angle += 0;
+draw_text_ext_transformed(room_width / 2, room_height / 2, manualStr, 10, 300, 2, 2, image_angle);
+
