@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_step1.wav",
-  "volume":1.0,
+  "soundFile":"snd_step1.ogg",
+  "volume":0.54,
 }

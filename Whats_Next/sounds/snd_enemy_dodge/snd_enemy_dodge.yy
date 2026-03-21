@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_enemy_dodge.wav",
-  "volume":1.0,
+  "soundFile":"snd_enemy_dodge.ogg",
+  "volume":0.38,
 }

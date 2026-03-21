@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_enemy_shoot.wav",
-  "volume":1.0,
+  "soundFile":"snd_enemy_shoot.ogg",
+  "volume":0.53,
 }

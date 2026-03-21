@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_enemy_damage.wav",
-  "volume":1.0,
+  "soundFile":"snd_enemy_damage.ogg",
+  "volume":0.53,
 }

@@ -5,4 +5,8 @@ if instance_exists(obj_Player) {
 	direction = 270
 }
 audio_play_sound(snd_enemy_shoot, 1, false)
-speed = global.bulletStats.enemyBulletSpeed;
+
+bulletSpeed = global.bulletStats.enemyBulletSpeed;
+speed = bulletSpeed;
+
+bulletDamage = global.bulletStats.enemyBulletDamage;

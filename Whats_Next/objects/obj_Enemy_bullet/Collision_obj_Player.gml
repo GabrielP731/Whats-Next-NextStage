@@ -1,3 +1,3 @@
 
-scr_damage_player(global.bulletStats.enemyBulletDamage)
+scr_damage_player(bulletDamage)
 instance_destroy()

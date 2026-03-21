@@ -1,3 +1,13 @@
+global.waveNumber = 0;
+global.coins = 0;
+global.cards_collected = 0;
+global.base_card_cost = 0;
+global.score = 0;
+global.card_pool = undefined;
+
+function initStats()
+{
+	
 // Originally in the object "Upgrade_menu" >> Create
 global.waveNumber = 1
 global.coins = 0; 
@@ -22,11 +32,11 @@ global.base_card_cost = 10;
 global.bulletStats = {
 	bulletDamage : 2,
 	fireRateDelay : 30,
-	bulletSpeed : 8,
+	bulletSpeed : 10,
 	bulletRange : 0, // A stat that should be removed soon (but stays for CardSystem compatibility)
-	enemyBulletSpeed : 2,
+	enemyBulletSpeed : 12,
 	enemyBulletDamage : 4
-}
+} // These stats are apparently set by a button and not this script
 
 // These were found in obj_tower (on object that is now renamed to obj_Player)
 global.towerStats = {
@@ -38,4 +48,5 @@ global.towerStats = {
 	endurance_mult : 1.0
 }
 
+}
 global.towerSprites = [spr_tower1, spr_tower2, spr_tower3];

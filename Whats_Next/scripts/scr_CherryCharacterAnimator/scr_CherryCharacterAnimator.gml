@@ -320,10 +320,13 @@ function ch8_DrawCharacter(_instance, _body = undefined, _action = undefined)
 // _direction [float]: the angle of the new instance (not its sprite)
 // _body [string]: the model to be displayed on screen
 // _action [string]: the action performed within the animated-sprite
-function ch8_SpawnTemporaryAnimation(_x, _y, _direction, _body, _action)
+function ch8_SpawnTemporaryAnimation(_xPos, _yPos, _xScale, _yScale, _direction, _body, _action)
 {
 	// Creating a temporary sprite (disappears at the final frame of the animation)
-	var _fadingInstance = instance_create_layer(_x, _y, 0, obj_DestroyOnAnimationEnd);
+	var _fadingInstance = instance_create_layer(_xPos, _yPos, "Instances", obj_DestroyOnAnimationEnd);
+	_fadingInstance.image_xscale = _xScale;
+	_fadingInstance.image_yscale = _yScale;
+	ch8_Init(_fadingInstance, _body);
 	_fadingInstance.direction = _direction;
 	ch8_DrawCharacter(_fadingInstance, _body, _action);
 }
@@ -400,14 +403,16 @@ function ch8_Attacking(_instance)
 function ch8_Dying(_instance)
 {
 	// Delete the old ch8 object
-	var _x = _instance.x;
-	var _y = _instance.y;
+	var _xPos = _instance.x;
+	var _yPos = _instance.y;
+	var _xScale = _instance.image_xscale;
+	var _yScale = _instance.image_yscale;
 	var _direction = _instance.direction;
 	var _body = _instance.ch8_characterBody;
 	instance_destroy(_instance);
 	
 	
-	ch8_SpawnTemporaryAnimation(_x, _y, _direction, _body, "death");
+	ch8_SpawnTemporaryAnimation(_xPos, _yPos, _xScale, _yScale, _direction, _body, "death");
 }
 
 // ch8_Init
@@ -419,11 +424,10 @@ function ch8_Dying(_instance)
 function ch8_Init(_instance, _body)
 {
 	// Variables
-	ch8_characterBody = _body;
-	ch8_characterAction = "idle";
-	ch8_characterState = ch8_CHARACTER_STATE.IDLE;
-	ch8_characterStatePrevious = undefined;
-	ch8_frameActionAvailable = true;
+	_instance.ch8_characterBody = _body;
+	_instance.ch8_characterAction = "idle";
+	_instance.ch8_characterState = ch8_CHARACTER_STATE.IDLE;
+	_instance.ch8_characterStatePrevious = undefined;
 }
 
 // ch8_EndFrame

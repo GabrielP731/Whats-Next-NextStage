@@ -101,6 +101,7 @@
     {"id":{"name":"obj_minimap_border","path":"objects/obj_minimap_border/obj_minimap_border.yy",},},
     {"id":{"name":"obj_player_smoke_particle","path":"objects/obj_player_smoke_particle/obj_player_smoke_particle.yy",},},
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
+    {"id":{"name":"obj_PlayLoseMusic","path":"objects/obj_PlayLoseMusic/obj_PlayLoseMusic.yy",},},
     {"id":{"name":"obj_start_prompt","path":"objects/obj_start_prompt/obj_start_prompt.yy",},},
     {"id":{"name":"obj_tintedCard","path":"objects/obj_tintedCard/obj_tintedCard.yy",},},
     {"id":{"name":"obj_wave_complete_text","path":"objects/obj_wave_complete_text/obj_wave_complete_text.yy",},},

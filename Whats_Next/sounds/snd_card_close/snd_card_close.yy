@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_card_close.wav",
+  "soundFile":"snd_card_close.ogg",
   "volume":1.0,
 }

@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_card_pick.wav",
+  "soundFile":"snd_card_pick.ogg",
   "volume":1.0,
 }
