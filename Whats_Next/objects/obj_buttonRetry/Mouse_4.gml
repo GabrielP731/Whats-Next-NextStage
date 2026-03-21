@@ -24,4 +24,6 @@ global.towerStats = {
 	towerHealthMax : 100 ,// originally obj_tower >> max_hp
 	endurance_mult : 1.0
 }
+// Reset global values.
+global.initStats();
 room_goto(RoomGame)
