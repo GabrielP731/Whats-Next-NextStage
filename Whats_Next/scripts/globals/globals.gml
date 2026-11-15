@@ -8,7 +8,7 @@ global.card_pool = undefined;
 function initStats()
 {
 	
-// Originally in the object "Upgrade_menu" >> Create
+// Originally in the object "Upgrade_menu" >> Create .
 global.waveNumber = 1
 global.coins = 0; 
 global.cards_collected = 0;
